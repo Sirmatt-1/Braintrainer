@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Braintrainer
@@ -19,15 +12,23 @@ namespace Braintrainer
 
         private void instructionClick(object sender, EventArgs e)
         {
-            if (1 == 1)
-            {
-
-            }
+            
         }
 
         private void gameClick(object sender, EventArgs e)
         {
-
+            
+            Button gameType = sender as Button;
+            if ((gameType.Tag).ToString() == "colour")
+            {
+                Colour_Game gameWindow = new Colour_Game();
+                gameWindow.Show();
+                
+            } else
+            {
+                NumberGame gameWindow = new NumberGame();
+                gameWindow.Show();
+            }
         }
     }
 }
