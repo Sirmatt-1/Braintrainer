@@ -17,12 +17,11 @@ namespace Braintrainer
 
         private void gameClick(object sender, EventArgs e)
         {
-            
             Button gameType = sender as Button;
-            if ((gameType.Tag).ToString() == "colour")
+            if (gameType.Tag.ToString() == "colour")
             {
                 Colour_Game gameWindow = new Colour_Game();
-                gameWindow.Show();
+                gameWindow.ShowDialog();
                 
             } else
             {
